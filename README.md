@@ -38,6 +38,21 @@ bash rebulid_module.sh
   - Re-run the installation and modulefile generation
   - Log all steps and errors to `rebuild_module.log`
 
+## 4. To assing the default module 
+Firts go to the following folder :
+```
+/sw/rl9g/modulefiles/applications/machine_learning
+```
+
+Modify the `.modulerc` file or create one, and should look like this
+
+``` 
+#%Module 1.0 -*- tcl -*-
+module-version machine_learning/2024.01 default
+```
+
+
+
 <!-- ## 4. Load the module
 After installation, load the module using the module system (adjust the path as needed):
 ```
