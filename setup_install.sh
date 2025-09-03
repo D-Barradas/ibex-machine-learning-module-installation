@@ -22,8 +22,6 @@ chmod g+w "$TARGET_DIR"
 # Copy run_install.sh into the new directory
 cp run_install.sh "$TARGET_DIR/"
 
-
-
 # Change to the new directory and execute the script
 cd "$TARGET_DIR"
 bash run_install.sh
