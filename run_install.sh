@@ -25,8 +25,9 @@ if ! git clone "${SRC_REPO}" -b "machine-learning-${VERSION}" "${INSTALL_BUILD_P
   exit 1
 fi
 
+
 cd "${INSTALL_BUILD_PATH}"
-if ! "${INSTALL_BUILD_PATH}/bin/create-conda-env.sh" | tee -a install.log; then
+if ! sbatch "${INSTALL_BUILD_PATH}/bin/create-conda-env.sbatch" | tee -a install.log; then
   echo "$PACKAGE - build failure - installation failed"
   exit 1
 fi
