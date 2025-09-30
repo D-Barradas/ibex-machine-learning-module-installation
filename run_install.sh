@@ -17,7 +17,8 @@ command -v git >/dev/null 2>&1 || { echo "git is required but not installed. Abo
 #MODULES LOADED
 ############################## INSTALLATION
 
-INSTALL_BUILD_PATH="${PREFIX}/machine_learning-module"
+#INSTALL_BUILD_PATH="${PREFIX}/machine_learning-module"
+INSTALL_BUILD_PATH="$PWD/machine_learning-module"
 
 # Clone the repository branch corresponding to the version
 if ! git clone "${SRC_REPO}" -b "machine-learning-${VERSION}" "${INSTALL_BUILD_PATH}" | tee -a install.log; then
